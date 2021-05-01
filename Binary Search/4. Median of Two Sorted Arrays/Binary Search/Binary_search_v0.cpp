@@ -29,7 +29,7 @@ public:
   
     // General algorithm to find the kth largest elements in the merged array.
     // Recursion is used.
-    int findKthSmallest(int &ptr1, int &ptr2, int &k, vector<int> &nums1, vector<int> &nums2, bool output = true) {
+    int findKthSmallest(int &ptr1, int &ptr2, int &k, vector<int> &nums1, vector<int> &nums2) {
         int n = nums1.size();
         int m = nums2.size();
 
@@ -51,22 +51,22 @@ public:
             if((ptr1 + k / 2 - 1) > n-1){ // When the length of array 1 is shorter than k, view nums1[k] as positive infinity, so return nums2[k]
                 ptr2 = ptr2 + k / 2;
                 k = k - k / 2;
-                return findKthSmallest(ptr1, ptr2, k, nums1, nums2,output);
+                return findKthSmallest(ptr1, ptr2, k, nums1, nums2);
             }
             else if((ptr2 + k / 2 - 1 > m-1)){ // When the length of array 2 is shorter than k, view nums2[k] as positive infinity, so return nums1[k]
                 ptr1 = ptr1 + k / 2;
                 k = k - k / 2;
-                return findKthSmallest(ptr1, ptr2, k, nums1, nums2,output);
+                return findKthSmallest(ptr1, ptr2, k, nums1, nums2);
             }
             else if (nums1[ptr1 + k / 2 - 1] <= nums2[ptr2 + k / 2 - 1]) { // Filter out half of the elements each time
                 ptr1 = ptr1 + k / 2;
                 k = k - k / 2;
-                return findKthSmallest(ptr1, ptr2, k, nums1, nums2,output);
+                return findKthSmallest(ptr1, ptr2, k, nums1, nums2);
             }
             else {
                 ptr2 = ptr2 + k / 2;
                 k = k - k / 2;
-                return findKthSmallest(ptr1, ptr2, k, nums1, nums2,output);
+                return findKthSmallest(ptr1, ptr2, k, nums1, nums2);
             }
         }
     }

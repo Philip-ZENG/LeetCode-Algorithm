@@ -1,4 +1,6 @@
 // Performance is extremely undesireable
+// Iterate through the string using for-loop for two times.
+// Time complexity is O(n^2)
 
 #include <string>
 #include <unordered_map>

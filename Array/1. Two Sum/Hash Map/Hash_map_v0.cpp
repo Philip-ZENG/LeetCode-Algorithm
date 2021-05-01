@@ -1,4 +1,5 @@
 // Use hasp map instead of two for loop to improve seaching efficiency
+// Searching by hashmap has a linear time complexity
 
 #include <vector>
 #include <iostream>

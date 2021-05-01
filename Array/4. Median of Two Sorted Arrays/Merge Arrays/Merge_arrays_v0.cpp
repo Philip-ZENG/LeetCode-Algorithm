@@ -1,4 +1,6 @@
 // Merging the two sorted array
+// Time complexity is O(m+n) since we need to merge each element of the two array in to one
+// Space complexity is O(m+n) since we need to create a new vector that conatians all the (m+n) elements
 
 #include <iostream>
 #include <vector>

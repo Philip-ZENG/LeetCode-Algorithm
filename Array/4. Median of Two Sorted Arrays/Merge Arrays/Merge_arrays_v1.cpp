@@ -1,5 +1,7 @@
 // The approach is the same as merging two arrays, but we don't actually merge
-// the two arrays but use variables, "pointers" instead.
+// the two arrays "physically", but instead use variables, "pointers" instead to represent the idea.
+// Time complexity is still O(m+n) since we need to go through all the elements one by one in the two array
+// Space complexity is improved to O(1) comparing to "Merge_arrays_v0.cpp", since only a constant number of variables are needed for each execution
 
 #include <iostream>
 #include <vector>

@@ -1,6 +1,6 @@
-// This problem is essentially a two sum problem, so we can preprocess the given array and make use of the code in the two sum questions.
+// This problem is essentially a two-sum problem, so we can preprocess the given array and make use of the code in the two-sum questions.
 // Recall the "1. Two Sum" question in LeetCode
-// The idea of using triple for-loop to list all the possible answers and remove the repeated answer afterwards is still preserved.
+// The idea of using triple for-loop to list all the possible answers and remove the repeated answer afterward is still preserved.
 // The idea of divide and conquer is used here.
 // For each fixed element, and we can apply the two sum's solution to the rest of the elements in the array.
 // Divide part:
@@ -8,7 +8,7 @@
 // Conquer part:
 // Triple for-loop is replaced by a double-for loop with a hash-map searching in the conquer part. 
 // Time complexity for conquer part is O(n^2logn)
-// Merge part:
+// Combine part:
 // Bottleneck of this version is in the merge step, which costs O(n^3)
 // In total:
 // Time complexity for this version is still O(n^3)

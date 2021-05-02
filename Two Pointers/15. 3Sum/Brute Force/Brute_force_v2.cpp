@@ -23,7 +23,7 @@ public:
         merge_sort(nums,0,nums.size()-1);
         vector<vector<int>> answer_book;
         for(int i=0; i < nums.size(); i++){
-            if(i == 0 || nums[i] != nums[i-1]){
+            if(i == 0 || nums[i] != nums[i-1]){ // These conditions are used to avoid repeated terms to increase the time performance
                 for(int j=i+1; j < nums.size(); j++){
                     if(j == i+1 || nums[j] != nums[j-1]){
                         for(int k=j+1; k < nums.size(); k++){
@@ -49,7 +49,8 @@ public:
             merge(array,left,partition,right); // Combine
         }
     }
-
+    
+    // Standard implementation of merge sort according to the "Introduction to Algorithm"
     void merge(vector<int> &array,int left,int partition,int right){
         vector<int> left_half;
         vector<int> right_half;
@@ -81,7 +82,6 @@ public:
 int main() {
     Solution handle = Solution();
     vector<int> question = {-1,0,1,2,-1,-4};
-
     vector<vector<int>> answer = handle.threeSum(question);
     for(int i =0; i < answer.size(); i++){
         for(int j=0; j < answer[i].size(); j++){

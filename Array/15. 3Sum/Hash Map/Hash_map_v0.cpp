@@ -2,7 +2,8 @@
 // in the two sum questions.
 // The idea of divide and conquer is used here.
 // Time complexity needs further improvement
-// Time complexity for this version is O(n^2*logn)
+// Time complexity for this version is still O(n^3)
+// Though with hashmap implemented two sums, the bottle neck is in the merge step, which costs O(n^3)
 
 #include <iostream>
 #include <vector>
@@ -33,7 +34,8 @@ public:
             }
 
             // Merge the partial answers into the answer_book
-            bool flag = true;
+            // Time complexity is O(n^2)
+            bool flag;
             for(int k = 0; k < partial_answer.size(); k++){
                 flag = true;
                 for(int l = 0; l < answer_book.size(); l++){
@@ -52,6 +54,7 @@ public:
         return answer_book;
     }
 
+    // Time complexity with unordered_map, which is a hashmap, is O(nlogn)
     vector<vector<int>> twoSum(vector<int>& nums, int target) {
         int size = nums.size();
         unordered_map<int,int> hashtable;
@@ -68,7 +71,9 @@ public:
         return answer;
     }
 
-    void sort_number(vector<int>& answer){ // Insertion sort
+    // Insertion sort with time complexity O(n^2)
+    // This would probably be fine and will not affect the overall performance in large, since we are only sorting 3 numbers
+    void sort_number(vector<int>& answer){
         for(int i = 1; i < answer.size(); i++ ){
             int key = answer[i];
             int j = i - 1;
@@ -80,6 +85,8 @@ public:
         }
     }
 
+    // Insertion sort with time complexity O(n^2)
+    // This could probably raise some problems, since when the answer book is large, this would be extremely time consuming
     void sort_vector(vector<vector<int>>& answer_book){
         for(int i = 1; i < answer_book.size(); i++ ){
             vector<int> key = answer_book[i];

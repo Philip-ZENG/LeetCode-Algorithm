@@ -1,5 +1,6 @@
 // Workable but time complexity is not acceptable, which is O(n^3) or even worse
 // Cannot pass the test in LeetCode : Time_out Error;
+// Basic idea is to use triple for-loop to list all the possible answers and remove the repeated answer afterwards.
 
 #include <iostream>
 #include <vector>

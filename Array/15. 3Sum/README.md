@@ -1,3 +1,6 @@
+Remark: This question is essentially a two sum quesiton with the "target" in two sum question view as any of the fiexed element in the given array.
+
+
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
 Notice that the solution set must not contain duplicate triplets.

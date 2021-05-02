@@ -1,9 +1,15 @@
-// This problem is essentially a two sum problem, so we can preprocess the given array and make use of the code
-// in the two sum questions.
+// This problem is essentially a two sum problem, so we can preprocess the given array and make use of the code in the two sum questions.
 // The idea of divide and conquer is used here.
-// Time complexity needs further improvement
+// For each fix element, and we can apply the two sum's solution to the rest of the elements in the array.
+// Divide part:
+// A single for-loop is used to divide the problem into n cases, n is the length of the array.
+// Conquer part:
+// Triple for-loop is replaced to a double-for loop with a hash-map searching in the conquer part. 
+// Time complexity for conquer part is O(n^2logn)
+// Merge part:
+// Bottle neck of this version is in the merge step, which costs O(n^3)
+// In total:
 // Time complexity for this version is still O(n^3)
-// Though with hashmap implemented two sums, the bottle neck is in the merge step, which costs O(n^3)
 
 #include <iostream>
 #include <vector>

@@ -1,5 +1,6 @@
 // This problem is essentially a two sum problem, so we can preprocess the given array and make use of the code in the two sum questions.
 // Recall the "1. Two Sum" question in LeetCode
+// The idea of using triple for-loop to list all the possible answers and remove the repeated answer afterwards is still preserved.
 // The idea of divide and conquer is used here.
 // For each fixed element, and we can apply the two sum's solution to the rest of the elements in the array.
 // Divide part:

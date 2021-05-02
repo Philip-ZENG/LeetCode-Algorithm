@@ -1,6 +1,5 @@
 // Workable but time complexity is not acceptable, which is O(n^3) or even worse
 // Cannot pass the test in LeetCode : Time_out Error;
-// Some problems occur in sorting: cannot fit the sequence given by the answer, though the elements are the same
 
 #include <iostream>
 #include <vector>
@@ -51,7 +50,16 @@ public:
         for(int i = 1; i < answer_book.size(); i++ ){
             vector<int> key = answer_book[i];
             int j = i - 1;
-            while(j >=0 && (answer_book[j][0] + answer_book[j][1]) > (key[0] + key[1]) ){
+            while(j >=0 && answer_book[j][0] > key[0] ){
+                answer_book[j+1] = answer_book[j];
+                j = j - 1;
+            }
+            answer_book[j+1] = key;
+        }
+        for(int i = 1; i < answer_book.size(); i++ ){
+            vector<int> key = answer_book[i];
+            int j = i - 1;
+            while(j >=0 && answer_book[j][0] == key[0] && answer_book[j][1] > key[1] ){
                 answer_book[j+1] = answer_book[j];
                 j = j - 1;
             }

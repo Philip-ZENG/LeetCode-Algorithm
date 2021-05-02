@@ -1,5 +1,6 @@
 // Workable but time complexity is not acceptable, which is O(n^3) or even worse
 // Cannot pass the test in LeetCode : Time_out Error;
+// Some problems occur in sorting: cannot fit the sequence given by the answer, though the elements are the same
 
 #include <iostream>
 #include <vector>

@@ -2,7 +2,14 @@
  * Classical two pointers question
  * Step 1: Sort the array
  * Step 2: Find the answer by shrinking both boundary of the array (moving left and right pointers)
- * Remark: Very similar to the question "3 Sum", so the basic idea is basically the same
+ * When the first element is fixed, we focus on the second and third element.
+ * If(first + second + third) == target:
+ * We should return the sum;
+ * If(first + second + third) > target:
+ * We should move the third  leftward to decrease the sum;
+ * If(first + second + third) < target:
+ * We should move the second rightward to increase the sum;
+ * Remark: Very similar to the question "3 Sum" and "Container with most water", so the basic idea is basically the same
  * Overall time complexity: O(n^2)
  * * Step 1 time complexity: O(nlogn)
  * * Step 2 time complexity: O(n^2)

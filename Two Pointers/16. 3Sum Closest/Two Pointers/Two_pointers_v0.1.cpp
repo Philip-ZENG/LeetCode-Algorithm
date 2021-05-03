@@ -20,20 +20,18 @@ public:
 
         for(int i = 0; i < n; i++){
             if(i == 0 || nums[i] != nums[i-1]){
-                for(int j = i+1; j < n; j++){
-                    int left = j;
-                    int right = n-1;
-                    while(left < right){
-                        sum = nums[i] + nums[left] + nums[right];
-                        if(abs(sum-target) < abs(closest-target)) closest = sum;
-                        if(sum == target) return closest;
-                        if(sum > target){
-                            while(left < right && nums[right] == nums[right-1]) right--;
-                            right--;
-                        }else{
-                            while(left < right && nums[left] == nums[left+1]) left++;
-                            left++;
-                        }
+                int left = i+1;
+                int right = n-1;
+                while(left < right){
+                    sum = nums[i] + nums[left] + nums[right];
+                    if(abs(sum-target) < abs(closest-target)) closest = sum;
+                    if(sum == target) return closest;
+                    if(sum > target){
+                        while(left < right && nums[right] == nums[right-1]) right--;
+                        right--;
+                    }else{
+                        while(left < right && nums[left] == nums[left+1]) left++;
+                        left++;
                     }
                 }
             }

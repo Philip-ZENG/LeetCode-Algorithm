@@ -1,5 +1,5 @@
 /*
- * Two pointers template:
+ * Two pointers template for nSum questions:
  * Background: Find all the combinations of 2 numbers in an array such their sum is equal to a given target;
  * We can use one number for only one time, but there is possibility that repeated numbers occur.
  * Step 1: sort the array
@@ -10,6 +10,7 @@
  * 3. Check the real cases in this category for more inspiration and understanding.
  * Recommendation:
  * Check "3Sum" and "Container with most water" first. These two are the most fundamental cases.
+ * Other nSum questions are: "3Sum Closest", "4Sum"
  */
 
 

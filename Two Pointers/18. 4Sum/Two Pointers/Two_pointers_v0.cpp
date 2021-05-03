@@ -21,6 +21,7 @@ public:
         if(n < 4) return answer_book;
         sort(nums.begin(),nums.end());
         for(int i = 0; i < n; i++){
+            if(nums[i] >= 0 && nums[i] > target) return answer_book;
             if(i == 0 || nums[i] != nums[i-1]){
                 for(int j = i+1; j < n; j++){
                     if(j == i+1 || nums[j] != nums[j-1]){

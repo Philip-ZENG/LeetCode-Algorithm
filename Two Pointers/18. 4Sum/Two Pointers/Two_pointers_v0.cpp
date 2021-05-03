@@ -3,6 +3,7 @@
  * Absolutely the same idea as "3 Sum" with only one more layer of for-loop
  * Step 1: Sort the array
  * Step 2: Find the answer
+ * Double nested for-loop is used and combined with two pointer method
  * Time complexity: O(n^3)
  * * Step 1: O(nlogn)
  * * Step 2: O(n^3)
@@ -40,7 +41,6 @@ public:
                             if(sum > target) right--;
                             if(sum < target) left++;
                         }
-
                     }
                 }
             }

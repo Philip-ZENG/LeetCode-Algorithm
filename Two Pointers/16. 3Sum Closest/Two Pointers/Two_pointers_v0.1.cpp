@@ -1,4 +1,5 @@
-/* Mild changes are made based on "Two_pointers_v0.cpp"
+/* 
+ * Mild changes are made based on "Two_pointers_v0.cpp"
  * Skip the repeated elements during each execution, which is the same as "15. 3Sum" question
 */
 

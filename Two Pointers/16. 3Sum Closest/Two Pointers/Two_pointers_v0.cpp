@@ -30,22 +30,20 @@ public:
         sort(nums.begin(),nums.end());
 
         for(int i = 0; i < n; i++){
-            for(int j = i+1; j < n; j++){
-                int left = j;
-                int right = n-1;
-                while(left < right){
-                    sum = nums[i] + nums[left] + nums[right];
-                    if(abs(sum-target) < abs(closest-target)){
-                        closest = sum;
-                    }
-                    if(sum == target){
-                        return closest;
-                    }
-                    else if(sum > target){
-                        right--;
-                    }else{
-                        left++;
-                    }
+            int left = i+1;
+            int right = n-1;
+            while(left < right){
+                sum = nums[i] + nums[left] + nums[right];
+                if(abs(sum-target) < abs(closest-target)){
+                    closest = sum;
+                }
+                if(sum == target){
+                    return closest;
+                }
+                else if(sum > target){
+                    right--;
+                }else{
+                    left++;
                 }
             }
         }

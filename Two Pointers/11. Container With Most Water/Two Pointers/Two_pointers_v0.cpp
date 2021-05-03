@@ -27,18 +27,25 @@ using namespace std;
 class Solution {
 public:
     int maxArea(vector<int>& height) {
+        if(height.size()<=1) return 0;
         int left = 0;
         int right = height.size()-1;
         int max_area = 0;
+        int area;
         while(left < right){
-            int area = (right - left) * min(height[left],height[right]);
-            if(area > max_area) max_area = area;
-            if(left < right && height[right] <= height[left]) right--;
-            else left++;
+            area = (right - left) * min(height[left],height[right]);
+            max_area = max(area,max_area);
+            if(height[right] <= height[left]){
+                right--;
+            }
+            else{
+                left++;
+            }
         }
         return max_area;
     }
 };
+
 
 
 

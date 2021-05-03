@@ -1,7 +1,9 @@
 // List all the possible answers using double nested for-loop.
 // Time complexity: O(n^2)
+// Space complexity: O(1)
 // Exceeds the time limit
 // Time out error
+
 
 #include <iostream>
 #include <vector>

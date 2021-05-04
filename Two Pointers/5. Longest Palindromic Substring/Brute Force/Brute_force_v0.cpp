@@ -1,5 +1,7 @@
 /*
- * First version of Two pointers method
+ * This version uses two pointers, but the essence is indeed a brute force approach
+ * We iterate through the whole string and check whether each substring is a palindrome.
+ * Several improvements are made such that its performance is better than that of a two nested for-loop version brute force approach.
  * Use two pointers to slice substrings and check whether it is the longest palindrome
  * Left pointer starts at index 0 and goes all the way to index n-1; (left pointer is fixed for each iteration)
  * Right pointer starts at index n-1 and goes leftward: each time s[left] != s[right] decrease right by 1;

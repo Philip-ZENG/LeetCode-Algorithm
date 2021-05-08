@@ -6,7 +6,7 @@
  * Remark: We use a vector of strings to store the char in each line directly rather than storing the index of each char
  * in "index_relationship_v0.cpp", this would save some spaces.
  * 
- * Time complextiy: O(n)
+ * Time complexity: O(n)
  */
 
 

@@ -5,6 +5,7 @@
  *
  * This version uses multiple recursion structure, we use two function to call each other recursively.
  * This helps us verify whether there is a match in the substrings recursively
+ * Time Complexity: Exponential
  */
 
 
@@ -82,7 +83,7 @@ public:
             if((p_ptr+1) < p.length() && p[p_ptr] != '.' && p[p_ptr+1] == '*'){
                 p_ptr = p_ptr+2;
             }
-                // When there is a '*' following "."
+            // When there is a '*' following "."
             else if(p[p_ptr] == '.' && (p_ptr+1) < p.length() && p[p_ptr+1] == '*'){
                 p_ptr = p_ptr+2;
             }

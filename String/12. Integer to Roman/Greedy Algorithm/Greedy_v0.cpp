@@ -39,6 +39,8 @@ public:
         string roman = "";
         while(num!=0){
             for(int i = 0; i < 13; i++){
+                // for the current num, once there is a suitable "roman number character", we would exit the for loop and restart
+                // the match again if num is still larger than 0.
                 if(num >= valueSymbles[i].first){
                     roman += valueSymbles[i].second;
                     num -= valueSymbles[i].first;

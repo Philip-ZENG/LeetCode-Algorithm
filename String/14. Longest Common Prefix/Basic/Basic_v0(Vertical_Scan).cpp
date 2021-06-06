@@ -1,8 +1,11 @@
 /**
+ * ## Vertical Scanning ##
+ * 
  * We check the chars with the same index for each element in the vector.
  * Once a difference is found we would return the value of the longest common prefix.
- * 
- * Time complexity = O(n^2) in the worst case
+ *
+ * Time complexity = O(nm) in the worst case, n is the number of elements in the vector, m is the length
+ * of the longest string.
  * Space complexity = O(1)
  */
 
@@ -49,3 +52,4 @@ int main() {
     std::cout << handle.longestCommonPrefix(strs) << std::endl;
     return 0;
 }
+

@@ -2,8 +2,7 @@
  * This version checks for the "two letters roman number characters" first and then check the
  * "single letter roman number characters".
  *
- * Time complexity  = O(1)
- * # since the length of each string is at most 15, so we can give an output within 15 loops
+ * Time complexity  = O(n) n is the length of the string
  * Space complexity = O(1)
  */
 

@@ -2,7 +2,7 @@
  * This version holds the essentially same core idea as version Basic_v0, however, we use self-calling functions instead of nested for loops
  * to reduce code repetition and increase code reuse rate.
  * 
- * Since the fundamental idea is the same, time and space performance has not been improved comparing to previous version.
+ * Since the fundamental idea is the same, time and space performance has not been improved comparing to Basic_v0 version.
  */
 
 #include <iostream>

@@ -3,6 +3,8 @@
  * to reduce code repetition and increase code reuse rate.
  * 
  * Since the fundamental idea is the same, time and space performance has not been improved comparing to Basic_v0 version.
+ * # This version makes use of the math relationship between the indexes and the times of repetition for each char 
+ * # The "form" is "recursion" but the central idea is not strictly speaking strongly connected to the "recursion method"
  */
 
 #include <iostream>
